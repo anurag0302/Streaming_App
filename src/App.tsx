@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const App = () => {
-    const num=0;
-  return (
-    <div>App</div>
-  )
-}
+  return <div>App</div>;
+};
 
-export default App
+export default App;
