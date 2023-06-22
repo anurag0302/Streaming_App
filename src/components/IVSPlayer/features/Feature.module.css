@@ -1,0 +1,20 @@
+.features {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10%; /* Adjust height as needed */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.viewCount{
+  color: aliceblue;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: rgba(1, 158, 255, 0.53);
+  padding: 3px 7px;
+  border-radius: 7px;
+}

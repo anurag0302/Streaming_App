@@ -1,0 +1,17 @@
+.player {
+  /* Adjust the player container styles as needed */
+  min-height: 10px;
+  min-width: 50%;
+  aspect-ratio: 16 / 9;
+  position: relative; /* Required for absolute positioning of overlays */
+}
+
+
+
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  .player {
+    width: 100%;
+  }
+}
