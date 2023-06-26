@@ -8,7 +8,7 @@ const Header = () => {
             <h3>Amway Live Shopping</h3>
         </div>
         <div className={styles.cart}>
-            <button style={{background:'none'}}><Cart/></button>
+            <button style={{background:'none',border:'none'}}><Cart/></button>
         </div>
     </div>
   )

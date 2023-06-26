@@ -9,6 +9,7 @@ export { ReactComponent as FullScreen } from './fullscreen.svg';
 export { ReactComponent as FullScreenIn } from './fullscreenIn.svg';
 export { ReactComponent as Cart } from './cart.svg';
 export { ReactComponent as Send } from './send.svg';
+export { ReactComponent as Reload } from './reload.svg';
 
 
 
