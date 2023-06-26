@@ -36,7 +36,7 @@ const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
         liveui: true,
         fluid: true,
         errorDisplay: false,
-        qualityLevels: {}
+       
       };
 
       if (!playerRef.current) {
@@ -47,9 +47,9 @@ const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
         player.on('error', () => {
           return <div>Sorry, the video failed to load. Please try again later.</div>;
         });
-        player.on('play', () => {
-          console.log(player.liveTracker)
-        })
+        // player.on('play', () => {
+        //   console.log(player.liveTracker)
+        // })
 
 
 
