@@ -13,6 +13,7 @@
  "license": "ISC",
  "dependencies": {
   "@svgr/webpack": "^8.0.1",
+  "@videojs/http-streaming": "^2.16.2",
   "@videojs/themes": "^1.0.1",
   "amazon-ivs-player": "^1.19.0",
   "eslint-plugin-eslint-comments": "^3.2.0",

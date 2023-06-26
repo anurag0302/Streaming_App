@@ -14,6 +14,7 @@ const createAbsolutePath = (assetPath: string) =>
 
 const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
     const videoRef = useRef(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const playerRef = useRef<any>(null);
     registerIVSTech(videojs, {
         wasmWorker: createAbsolutePath(wasmWorkerPath),
@@ -36,6 +37,7 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
                 ivsPlayer.addEventListener(events.PlayerState.ENDED, () => {
                     console.log('IVS Player is Ended');
                 });
+                
            
                 player.controlBar.removeChild('pictureInPictureToggle');
                 player.controlBar.removeChild('fullscreenToggle');
@@ -45,7 +47,8 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
                     player.src(streamUrl);
                 });
                 player.enableIVSQualityPlugin();
-                player.volume(0.1)
+                // player.volume(0.1)
+                player.muted(true)
                 playerRef.current = player;
             }
             return () => {
