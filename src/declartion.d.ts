@@ -13,3 +13,6 @@ declare module 'amazon-ivs-player/dist/assets/amazon-ivs-wasmworker.min.wasm';
 declare module 'amazon-ivs-player/dist/assets/amazon-ivs-wasmworker.min.js';
 declare module 'video.js';
 declare module 'videojs-contrib-hls'
+declare module 'videojs-http-source-selector'
+declare module 'videojs-hls-quality-selector'
+
