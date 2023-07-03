@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
-import styles from './IVSPlayer.module.css';
+import styles from './VideoPlayer.module.css';
 import {
   registerIVSQualityPlugin,
   registerIVSTech,

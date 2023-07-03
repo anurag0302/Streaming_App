@@ -1,8 +1,7 @@
 import React from 'react'
 import styles from './Feature.module.css'
-import {
-  ViewCount
-} from "../../../icons";
+import { ViewCount } from '../../../icons'
+
 
 
 const Feature = () => {

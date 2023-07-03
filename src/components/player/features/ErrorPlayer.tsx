@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ErrorPlayer.module.css'
-import { Reload } from '../../../icons'
+import { Reload } from '../../icons'
 
 type ErrorPlayerProps={
   error:string

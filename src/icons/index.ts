@@ -8,8 +8,12 @@ export { ReactComponent as ViewCount } from './viewCount.svg';
 export { ReactComponent as FullScreen } from './fullscreen.svg';
 export { ReactComponent as FullScreenIn } from './fullscreenIn.svg';
 export { ReactComponent as Cart } from './cart.svg';
+export { ReactComponent as CartDark } from './cartDark.svg';
+
 export { ReactComponent as Send } from './send.svg';
 export { ReactComponent as Reload } from './reload.svg';
+export { ReactComponent as Sun } from './sun.svg';
+export { ReactComponent as Moon } from './moon.svg';
 
 
 

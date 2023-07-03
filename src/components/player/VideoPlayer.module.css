@@ -5,6 +5,10 @@
   aspect-ratio: 16 / 9;
   position: relative; /* Required for absolute positioning of overlays */
 }
+.ivsplayer{
+  border-radius: 5px;
+}
+
 
 /* Mobile devices */
 @media (max-width: 767px) {

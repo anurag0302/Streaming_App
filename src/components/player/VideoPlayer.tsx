@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
-import styles from './IVSPlayer.module.css';
+import styles from './VideoPlayer.module.css';
 import 'video.js/dist/video-js.css';
 import '@videojs/themes/dist/sea/index.css';
 import qualitySelector from 'videojs-hls-quality-selector';
 import qualityLevels from 'videojs-contrib-quality-levels';
 
-const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
+const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerRef = useRef<any>(null);
@@ -38,9 +38,8 @@ const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
         player.hlsQualitySelector({
           displayCurrentQuality: true,
         });
-        // player.qualityLevels();
+
         player.qualityLevels();
-        console.log(player);
 
         player.on('error', () => {
           const duration = player.duration();
@@ -54,11 +53,15 @@ const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
             player.loadingSpinner.hide();
           }
         });
+        // player.on('play',()=>{
+        //   player.liveTracker.seekToLiveEdge()
+        //   console.log('csa',player.liveTracker)
+        // })\
+
 
         player.controlBar.removeChild('playToggle');
         player.controlBar.removeChild('fullscreenToggle');
         player.controlBar.removeChild('pictureInPictureToggle');
-        // player.controlBar.removeChild('progressControl');
 
         // player.on('error', (e) => { setErrorPlayer(e.target.player.error_.message) });
         playerRef.current = player;
@@ -81,15 +84,15 @@ const IVSPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
       <video
         controls
         ref={videoRef}
-        className={` ${styles.ivsplayer} video-js vjs-fill `}
+        className={` ${styles.ivsplayer} video-js vjs-fill streamplayer`}
         autoPlay
         muted
       >
-        <source src={streamUrl} type="application/x-mpegURL" />
-        <track kind="captions" label="English C" default />
+        {/* <source src={streamUrl} type="application/x-mpegURL" /> */}
+        {/* <track kind="captions" label="English C" default /> */}
       </video>
     </div>
   );
 };
 
-export default IVSPlayer;
+export default VideoPlayer;
