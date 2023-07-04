@@ -16,6 +16,7 @@ const Home = () => {
     return (
         <div style={{display:'flex',justifyContent:'space-evenly',flexWrap:'wrap',paddingTop:'20px',backgroundColor:THEMELIGHT.Background,alignItems:'center'}}>
             <VideoPlayer streamUrl={streamUrl}/>
+            
             <TextContainer/>
         </div>
     )
