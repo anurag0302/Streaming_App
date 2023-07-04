@@ -1,0 +1,70 @@
+.containerText {
+  width: 30%;
+  margin-top: 10px;
+}
+.text_container {
+  height: 300px;
+  background-color: rgba(224, 221, 221, 0.555);
+  border-radius: 5px;
+  padding: 20px;
+  overflow-y: scroll;
+  padding: 10px;    
+  display: flex;
+  flex-direction: column;
+}
+.containerText h4{
+    margin: 10px 20px 10px 0;
+}
+.textInput {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.text {
+  flex: 1;
+  margin-right: 5%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: rgba(178, 172, 172, 0.555);
+  border: none;
+    
+}
+.text::after{
+    border: none;
+}
+.button {
+  background-color: rgb(56, 91, 249);
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+}
+.chat {
+  max-width: fit-content;
+  margin-top: 10px;
+  background-color: rgb(165, 210, 249);
+  padding: 5px 7px;
+  border-radius: 10px;
+}
+.chatgroup {
+  max-width: fit-content;
+  margin-top: 10px;
+  background-color: rgb(51, 160, 255);
+  padding: 5px 7px;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+@media (max-width: 767px) {
+  .containerText {
+    width: 100%;
+    margin: 20px;
+    max-height: 200px;
+  }
+  .text_container {
+    height: 200px;
+  }
+}
