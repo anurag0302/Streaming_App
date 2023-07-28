@@ -279,10 +279,10 @@ const ChatBox = () => {
                 <DoorOpen />
               </button>
             </div>
-            <label htmlFor="modcheck" style={{ paddingRight: '10px' }}>Moderator
+            {/* <label htmlFor="modcheck" style={{ paddingRight: '10px' }}>Moderator
             </label>
             <input type='checkbox' id='modcheck'
-              onChange={(e) => { e.target.checked ? setIsModerator(true) : setIsModerator(false) }} />
+              onChange={(e) => { e.target.checked ? setIsModerator(true) : setIsModerator(false) }} /> */}
           </div>
         </form>
       )}
