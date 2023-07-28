@@ -16,6 +16,7 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
 
   useEffect(() => {
     const setupPlayer = () => {
+      
       const playerOptions = {
         autoplay: true,
         controls: true,

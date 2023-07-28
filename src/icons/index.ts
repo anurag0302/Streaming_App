@@ -14,6 +14,12 @@ export { ReactComponent as Send } from './send.svg';
 export { ReactComponent as Reload } from './reload.svg';
 export { ReactComponent as Sun } from './sun.svg';
 export { ReactComponent as Moon } from './moon.svg';
+export { ReactComponent as Delete } from './delete.svg';
+export { ReactComponent as DoorOpen } from './dooropen.svg';
+export { ReactComponent as RemoveUser } from './removeuser.svg';
+export { ReactComponent as Online } from './online.svg';
+export { ReactComponent as Offline } from './offline.svg';
+
 
 
 

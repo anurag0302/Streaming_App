@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
-import styles from './VideoPlayer.module.css';
+import styles from './IVSVideoPlayer.module.css';
 import {
   registerIVSQualityPlugin,
   registerIVSTech,
@@ -14,7 +14,7 @@ import wasmWorkerPath from 'amazon-ivs-player/dist/assets/amazon-ivs-wasmworker.
 const createAbsolutePath = (assetPath: string) =>
   new URL(assetPath, document.URL).toString();
 
-const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
+const IVSVideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
   const videoRef = useRef(null);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const playerRef = useRef<any>(null);
@@ -38,6 +38,11 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
         ivsPlayer.addEventListener(events.PlayerState.ENDED, () => {
           console.log('IVS Player is Ended');
         });
+        ivsPlayer.addEventListener(player.getIVSEvents().PlayerEventType.TEXT_METADATA_CUE,
+          function (cue) {
+        console.log('Timed metadata: ', cue.text);
+      });
+      
 
         player.controlBar.removeChild('pictureInPictureToggle');
         player.controlBar.removeChild('fullscreenToggle');
@@ -62,10 +67,10 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
     setupPlayer();
   }, [streamUrl]);
   return (
-    <div className={styles.player}>
+    <div className={styles.player} style={{backgroundColor:'green'}}>
       <video
         ref={videoRef}
-        className="video-js vjs-default-skin vjs-4-3 vjs-big-play-centered "
+        className={`video-js vjs-fill streamplayer`}
         controls
         autoPlay
         muted
@@ -76,4 +81,4 @@ const VideoPlayer: React.FC<{ streamUrl: string }> = ({ streamUrl }) => {
   );
 };
 
-export default VideoPlayer;
+export default IVSVideoPlayer;
